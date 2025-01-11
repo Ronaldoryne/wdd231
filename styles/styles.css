@@ -1,0 +1,113 @@
+
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+/* Global Styles */
+body {
+font-family: 'Open Sans', sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f9f9f9;
+}
+
+header {
+background-color: #333;
+color: #fff;
+padding: 1rem;
+text-align: center;
+}
+
+nav {
+background-color: #444;
+padding: 0.5rem;
+text-align: center;
+}
+
+nav ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+nav li {
+margin-right: 20px;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+transition: color 0.2s ease;
+}
+
+nav a:hover {
+color: #ccc;
+}
+
+main {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 2rem;
+}
+
+section {
+background-color: #f7f7f7;
+padding: 1rem;
+margin-bottom: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+margin-top: 0;
+font-family: 'Lato', sans-serif;
+font-weight: 700;
+}
+
+footer {
+background-color: #333;
+color: #fff;
+padding: 1rem;
+text-align: center;
+clear: both;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 768px) {
+nav ul {
+flex-direction: column;
+}
+nav li {
+margin-right: 0;
+}
+nav a {
+padding: 0.5rem;
+}
+main {
+padding: 1rem;
+}
+section {
+margin-bottom: 10px;
+}
+}
+
+@media only screen and (max-width: 480px) {
+header {
+padding: 0.5rem;
+}
+nav {
+padding: 0.2rem;
+}
+main {
+padding: 0.5rem;
+}
+section {
+padding: 0.5rem;
+}
+}
+
+
