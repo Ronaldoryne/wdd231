@@ -5,3 +5,6 @@ document.getElementById('copyright-year').textContent = currentYear;
 // Get the last modified date for the footer
 const lastModified = document.lastModified;
 document.getElementById('last-modified').textContent = `Last modified: ${lastModified}`;
+
+
+courses.js

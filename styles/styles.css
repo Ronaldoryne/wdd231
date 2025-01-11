@@ -1,86 +1,62 @@
+
+
+
 body {
-font-family: 'Open Sans', sans-serif;
-margin: 0;
-padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-background-color: #333;
-color: #fff;
-padding: 1rem;
-text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
 }
 
 nav ul {
-display: flex; /* Added display: flex; */
-flex-wrap: wrap;
-justify-content: space-between;
-list-style: none;
-margin: 0;
-padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
-flex-basis: 20%;
-margin-right: 20px;
+  flex-basis: 20%;
+  margin-right: 20px;
 }
 
 nav a {
-color: #fff;
-text-decoration: none;
-transition: color 0.2s ease;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-color: #ccc;
+  color: #ccc;
 }
 
 main {
-max-width: 800px;
-margin: 2rem auto;
-padding: 2rem;
-background-color: #f9f9f9;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 section {
-background-color: #fff;
-padding: 1rem;
-margin-bottom: 1rem;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-background-color: #333;
-color: #fff;
-padding: 1rem;
-text-align: center;
-clear: both;
+#course-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
-
-/* Added CSS Flex usage */
-.card-grid {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 1rem;
-}
-
-.card {
-background-color: #fff;
-padding: 1rem;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-width: calc(33.33% - 1rem);
-}
-
-/* Media query for responsive design */
-@media (max-width: 768px) {
-.card-grid {
-flex-direction: column;
-}
-.card {
-width: 100%;
-}
-}
-
 
