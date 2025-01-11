@@ -75,39 +75,3 @@ text-align: center;
 clear: both;
 }
 
-/* Responsive Design */
-
-@media only screen and (max-width: 768px) {
-nav ul {
-flex-direction: column;
-}
-nav li {
-margin-right: 0;
-}
-nav a {
-padding: 0.5rem;
-}
-main {
-padding: 1rem;
-}
-section {
-margin-bottom: 10px;
-}
-}
-
-@media only screen and (max-width: 480px) {
-header {
-padding: 0.5rem;
-}
-nav {
-padding: 0.2rem;
-}
-main {
-padding: 0.5rem;
-}
-section {
-padding: 0.5rem;
-}
-}
-
-
