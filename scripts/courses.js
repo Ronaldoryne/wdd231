@@ -16,7 +16,7 @@ const courses = [
         name: "Programming with Functions",
         credits: 3,
         description: "Introduction to programming with functions, implementing data structures, and program planning.",
-        semester: "Fall 2023",
+        semester: "Fall 2024",
         category: "CSE",
         completed: true  // Update this based on your completion status
     },
@@ -25,7 +25,7 @@ const courses = [
         name: "Web Fundamentals",
         credits: 3,
         description: "Basic principles of web design and development.",
-        semester: "Fall 2023",
+        semester: "Fall 2024",
         category: "WDD",
         completed: true  // Update this based on your completion status
     },
@@ -34,7 +34,7 @@ const courses = [
         name: "Programming Building Blocks",
         credits: 3,
         description: "Introduction to the basics of programming.",
-        semester: "Summer 2023",
+        semester: "Summer 2024",
         category: "CSE",
         completed: true  // Update this based on your completion status
     },
