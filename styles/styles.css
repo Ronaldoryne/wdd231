@@ -1,62 +1,330 @@
+/* Main Styles for WDD 231 Course Home Page */
 
+/* === VARIABLES === */
+:root {
+    --primary-color: #2b5797;
+    --secondary-color: #5c88c5;
+    --accent-color: #f8b400;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --completed-color: #808080; /* Changed to grey */
+    --header-font: 'Source Sans 3', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+    --border-radius: 5px;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+/* === GENERAL STYLES === */
+* {
+    box-sizing: border-box;
+}
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: var(--body-font);
+    color: var(--dark-color);
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    background-color: #f5f7fa;
 }
 
+h1, h2, h3 {
+    font-family: var(--header-font);
+    margin-top: 2rem;
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* === HEADER STYLES === */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--light-color);
+    border-bottom: 3px solid var(--primary-color);
+    margin-bottom: 2rem;
 }
 
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.header-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
-nav li {
-  flex-basis: 20%;
-  margin-right: 20px;
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s ease;
+.name {
+    font-family: var(--header-font);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-left: 1rem;
 }
 
-nav a:hover {
-  color: #ccc;
+/* === NAVIGATION STYLES === */
+nav {
+    width: 100%;
 }
 
+#menu-button {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+
+#menu-button span {
+    display: block;
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 5px auto;
+    border-radius: 3px;
+}
+
+#primary-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+#primary-nav.open {
+    display: flex;
+}
+
+#primary-nav li {
+    margin: 0;
+    text-align: center;
+}
+
+#primary-nav li a {
+    display: block;
+    padding: 0.8rem;
+    color: var(--dark-color);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #e9ecef;
+    transition: background-color 0.3s;
+}
+
+#primary-nav li a:hover {
+    background-color: #e9ecef;
+    text-decoration: none;
+}
+
+#primary-nav li.active a {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* === MAIN CONTENT STYLES === */
 main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 
 section {
-  background-color: #fff;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e9ecef;
 }
 
-#course-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+section:last-child {
+    border-bottom: none;
 }
 
+/* === COURSE SECTION STYLES === */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+    padding: 0.5rem 1rem;
+    background-color: #e9ecef;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.filter-buttons button:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.filter-buttons button.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.credit-total {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Updated course container to show boxes */
+.course-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Updated course card styles */
+.course-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s;
+    margin-bottom: 1rem;
+}
+
+.course-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Changed completed courses to grey background */
+.course-card.completed {
+    background-color: #f0f0f0;
+    border-left: 4px solid var(--completed-color);
+}
+
+.course-code {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.course-name {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.course-info {
+    display: flex;
+    justify-content: space-between;
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.completed-badge {
+    background-color: var(--completed-color);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--border-radius);
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+/* === LEARNING ACTIVITIES STYLES === */
+#activities-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#activities-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+#activities-list li:last-child {
+    border-bottom: none;
+}
+
+/* === FOOTER STYLES === */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* === MEDIA QUERIES === */
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .header-content {
+        margin-bottom: 0;
+    }
+    
+    #menu-button {
+        display: none;
+    }
+    
+    #primary-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    #primary-nav li {
+        margin-left: 1rem;
+    }
+    
+    #primary-nav li a {
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+    }
+    
+    .course-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .course-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

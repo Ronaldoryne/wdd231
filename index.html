@@ -1,61 +1,78 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>WDD 231: Web Frontend Development I - Ronaldo Ryne Mabuto</title>
-  <meta name="description" content="WDD 231: Web Frontend Development I, exploring HTML, CSS, and JavaScript for interactive web pages.">
-  <meta name="author" content="Ronaldo Ryne Mabuto">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script src="scripts/getdates.js" defer></script>
-  <script src="scripts/courses.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 Course Home Page - Web Frontend Development I">
+    <meta name="author" content="Ronaldo Ryne Mabuto">
+    <title>WDD 231 - Web Frontend Development I</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <!-- JavaScript Files with defer attribute -->
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>WDD 231: Web Frontend Development I - Ronaldo Ryne Mabuto</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Chamber</a></li>
-        <li><a href="#">GitHub Profile</a></li>
-        <li><a href="https://www.linkedin.com/in/ronaldo-mabuto-1698a0315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></li>
-        <li><a href="#">Canvas</a></li>
-        <li><a href="#">Scripture</a></li>
-        <li><a href="#">Final Project</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Section 1</h2>
-      <p>My name is Ronaldo Ryne Mabuto. I was born in Zimbabwe and live with my parents. I love to play chess whenever I am not busy.</p>
-    </section>
-    <section>
-      <h2>Section 2</h2>
-      <p>Zimbabwe is a land of breathtaking beauty and rich history, a country where the vibrant spirit of its people shines through.</p>
-    </section>
-    <section>
-      <h2>Section 3</h2>
-      <p>I love to learn different new things always.</p>
-    </section>
-    <section id="courses">
-      <h2>Courses</h2>
-      <div id="course-cards"></div>
-      <p id="total-credits"></p>
-      <button id="all-courses-btn">All Courses</button>
-      <button id="wdd-courses-btn">WDD Courses</button>
-      <button id="cse-courses-btn">CSE Courses</button>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; <span id="copyright-year"></span> Ronaldo Ryne Mabuto, Zimbabwe</p>
-    <p id="last-modified"></p>
-  </footer>
+    <header>
+        <div class="header-content">
+            <img src="images/profile.jpg" alt="Your Name" class="profile-img">
+            <span class="name">Ronaldo Ryne Mabuto</span>
+        </div>
+        <nav>
+            <button id="menu-button" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="primary-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+                <li><a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></li>
+                <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Home</h1>
+        
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>Hello! I'm a student at BYU-Idaho studying Web Frontend Development. I am passionate about creating user-friendly web experiences and solving problems through coding. This page serves as my course homepage for WDD 231.</p>
+        </section>
+        
+        <section id="certificate">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button id="all-courses" class="active">All Courses</button>
+                <button id="wdd-courses">WDD Courses</button>
+                <button id="cse-courses">CSE Courses</button>
+            </div>
+            <p class="credit-total">Total Credits: <span id="credit-count">0</span></p>
+            <div id="course-cards" class="course-container"></div>
+        </section>
+        
+        <section id="learning-activities">
+            <h2>Learning Activities</h2>
+            <ul id="activities-list">
+                <li>Week 01: <a href="#">Course Home Page</a></li>
+                <!-- More activities will be added as the course progresses -->
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | Ronaldo Ryne Mabuto | Gauteng/South Africa</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
-
-
