@@ -1,0 +1,94 @@
+
+[
+    {
+      "id": 1,
+      "name": "TechVision Innovations",
+      "address": "1234 Silicon Avenue, Tech Park, CA 94103",
+      "phone": "(415) 555-7890",
+      "website": "https://www.techvisioninnovations.com",
+      "image": "techvision.png",
+      "membershipLevel": 3,
+      "founded": 2008,
+      "employees": 450,
+      "industry": "Technology",
+      "description": "Leading provider of AI and machine learning solutions for businesses"
+    },
+    {
+      "id": 2,
+      "name": "Green Earth Sustainability",
+      "address": "789 Eco Lane, Greenville, OR 97301",
+      "phone": "(503) 555-4321",
+      "website": "https://www.greenearthsus.com",
+      "image": "greenearth.png",
+      "membershipLevel": 2,
+      "founded": 2015,
+      "employees": 95,
+      "industry": "Environmental Services",
+      "description": "Eco-friendly products and consulting for sustainable business practices"
+    },
+    {
+      "id": 3,
+      "name": "Harbor Financial Services",
+      "address": "567 Market Street, Financial District, NY 10005",
+      "phone": "(212) 555-6789",
+      "website": "https://www.harborfinancial.com",
+      "image": "harbor.png",
+      "membershipLevel": 3,
+      "founded": 1992,
+      "employees": 380,
+      "industry": "Financial Services",
+      "description": "Comprehensive financial planning and investment management"
+    },
+    {
+      "id": 4,
+      "name": "Sunshine Bakery",
+      "address": "321 Main Street, Downtown, TX 75201",
+      "phone": "(214) 555-9876",
+      "website": "https://www.sunshinebakery.com",
+      "image": "sunshine.png",
+      "membershipLevel": 1,
+      "founded": 2018,
+      "employees": 23,
+      "industry": "Food & Beverage",
+      "description": "Artisanal breads and pastries made with locally-sourced ingredients"
+    },
+    {
+      "id": 5,
+      "name": "Pinnacle Construction",
+      "address": "890 Builder's Way, Industrial Park, IL 60607",
+      "phone": "(312) 555-3456",
+      "website": "https://www.pinnacleconst.com",
+      "image": "pinnacle.png",
+      "membershipLevel": 2,
+      "founded": 2001,
+      "employees": 175,
+      "industry": "Construction",
+      "description": "Commercial and residential construction with a focus on sustainable building practices"
+    },
+    {
+      "id": 6,
+      "name": "Healing Hands Medical Center",
+      "address": "456 Wellness Avenue, Medical District, WA 98104",
+      "phone": "(206) 555-2345",
+      "website": "https://www.healinghandsmed.com",
+      "image": "healinghands.png",
+      "membershipLevel": 3,
+      "founded": 1985,
+      "employees": 520,
+      "industry": "Healthcare",
+      "description": "Comprehensive healthcare services with state-of-the-art facilities"
+    },
+    {
+      "id": 7,
+      "name": "Bright Future Education",
+      "address": "123 Learning Lane, University District, MA 02138",
+      "phone": "(617) 555-8765",
+      "website": "https://www.brightfutureedu.com",
+      "image": "brightfuture.png",
+      "membershipLevel": 1,
+      "founded": 2010,
+      "employees": 45,
+      "industry": "Education",
+      "description": "Innovative educational programs and resources for K-12 students"
+    }
+  ]
