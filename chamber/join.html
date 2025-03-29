@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Business directory for the Springpace Chamber of Commerce, featuring local businesses and organizations">
+    <meta name="author" content="Ronaldo Ryne Mabuto">
+    
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Business Directory | Springpace Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://mysite.com/chamber/images/Springpace.jpg">
+    <meta property="og:url" content="https://ronaldoryne.github.io/wdd231/chamber/directory.html">
+    <title>Business Directory | Springpace Chamber of Commerce</title>
+    <!-- Favicon -->
+    <link rel="icon"  href="images/favicon.ico"> 
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Scripts -->
+    <script src="scripts/date.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="logo-container">
+                <img src="data:image/jpeg;base64,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" alt="Springpace Chamber of Commerce Logo">
+
+        <h1>Join Our Chamber</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <main class="main-container">
+            <section id="join-form">
+                <h2>Membership Application</h2>
+                <form action="thankyou.html" method="post">
+                    <div>
+                        <label for="first_name">First Name:</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    </div>
+                    
+                    <div>
+                        <label for="last_name">Last Name:</label>
+                        <input type="text" id="last_name" name="last_name" required>
+                    </div>
+        
+                    <div>
+                        <label for="organization_title">Organizational Title:</label>
+                        <input type="text" id="organization_title" name="organization_title">
+                    </div>
+        
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+        
+                    <div>
+                        <label for="mobile_phone">Mobile Phone Number:</label>
+                        <input type="tel" id="mobile_phone" name="mobile_phone" required>
+                    </div>
+        
+                    <div>
+                        <label for="organization">Business/Organization Name:</label>
+                        <input type="text" id="organization" name="organization" required>
+                    </div>
+        
+                    <div>
+                        <label for="membership_level">Membership Level:</label>
+                        <select id="membership_level" name="membership_level">
+                            <option value="NP">NP Membership (Non-Profit, Free)</option>
+                            <option value="Bronze">Bronze Membership</option>
+                            <option value="Silver">Silver Membership</option>
+                            <option value="Gold">Gold Membership</option>
+                        </select>
+                    </div>
+        
+                    <div style="width: 100%;">
+                        <label for="organization_description">Business/Organization Description:</label>
+                        <textarea id="organization_description" name="organization_description"></textarea>
+                    </div>
+        
+                    <input type="hidden" name="timestamp" id="timestamp">
+        
+                    <button type="submit">Submit Application</button>
+                </form>
+            </section>
+        
+            <section id="membership-cards">
+                <h2>Membership Levels</h2>
+                <div class="card" id="np-card">
+                    <h3>NP Membership</h3>
+                    <p>Exclusive benefits for non-profits.</p>
+                    <button onclick="openModal('np-modal')">More Info</button>
+                </div>
+                <div class="card" id="bronze-card">
+                    <h3>Bronze Membership</h3>
+                    <p>Basic membership with great benefits.</p>
+                    <button onclick="openModal('bronze-modal')">More Info</button>
+                </div>
+                <div class="card" id="silver-card">
+                    <h3>Silver Membership</h3>
+                    <p>Advanced membership with extra perks.</p>
+                    <button onclick="openModal('silver-modal')">More Info</button>
+                </div>
+                <div class="card" id="gold-card">
+                    <h3>Gold Membership</h3>
+                    <p>Premium membership with full benefits.</p>
+                    <button onclick="openModal('gold-modal')">More Info</button>
+                </div>
+            </section>
+        </main>
+        
+        <div id="np-modal" class="modal hidden">NP Membership Benefits...</div>
+        <div id="bronze-modal" class="modal hidden">Bronze Membership Benefits...</div>
+        <div id="silver-modal" class="modal hidden">Silver Membership Benefits...</div>
+        <div id="gold-modal" class="modal hidden">Gold Membership Benefits...</div>
+    </main>
+</body>  
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-left">
+                <h3>Springpace Chamber of Commerce</h3>
+                <p>10 Ruetendo kwekwe</p>
+                <p>Springpace, Zim 232</p>
+                <p>info@Springpace.org</p>
+                <p>(111) 455-2300</p>
+            </div>
+        </div>    
+            <div class="footer-center">
+                <div class="social-icons">
+                    <a href="#" aria-label="Visit our YouTube channel"><img src="../chamber/images/youtube.png" alt="YouTube"></a>
+                    <a href="#" aria-label="Follow us on Twitter"><img src="../chamber/images/twitter.png" alt="Twitter"></a>
+                    <a href="#" aria-label="Connect with us on LinkedIn"><img src="../chamber/images/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            
+            <div class="footer-right">
+                <p>WDD231 Class Project</p>
+                <p> Ronaldo Ryne Mabuto</p>
+                <p>© Springpace chambers of commerce </p>
+                <p>Last Modification: <span id="last-modified"></span></p>
+            </div>
+</html>
