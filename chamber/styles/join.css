@@ -232,7 +232,7 @@ main h2 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: var
+  margin-bottom: var;
 }
 
 #join-form textarea, #join-form button {
