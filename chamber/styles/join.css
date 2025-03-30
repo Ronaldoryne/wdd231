@@ -1,285 +1,249 @@
-/* Base CSS - Mobile First */
 
-/* Variables */
+
 :root {
-    --primary-color: #df275e;
-    --secondary-color: #deeaee;
-    --accent-color: hsl(152, 75%, 51%);
-    --text-dark: #333;
-    --text-light: #fff;
-    --header-font: 'Montserrat', sans-serif;
-    --body-font: 'Open Sans', sans-serif;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --border-radius: 5px;
+  --primary-color: #df275e;
+  --secondary-color: #deeaee;
+  --accent-color: hsl(152, 75%, 51%);
+  --text-dark: #333;
+  --text-light: #fff;
+  --header-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 5px;
+  --spacing: 1.5rem;
 }
 
-/* Typography */
+
+
 body {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-family: var(--body-font);
-    color: var(--text-dark);
-    line-height: 1.6;
-    font-size: 16px;
+  font-family: var(--body-font);
+  font-weight: 400;
+  color: var(--text-dark);
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 h1, h2, h3, h4 {
-    font-weight: 100;
-    margin-top: 0;
+  font-weight: 100;
+  margin-top: 0;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
-/* Header Styles */
+
 header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing);
 }
 
 .header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo-container img {
-    width: 60px;
-    height: auto;
-    margin-right: 1rem;
+  width: 60px;
+  height: auto;
+  margin-right: var(--spacing);
 }
 
 .site-name h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0;
+  font-size: 1.8rem;
+  margin-bottom: 0;
 }
 
 .site-name p {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
-/* Navigation */
+
 nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 nav a {
-    display: block;
-    padding: 0.8rem 1rem;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
+  display: block;
+  padding: 0.8rem 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 nav a:hover {
-    background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
 nav a.active {
-    background-color: var(--accent2-color);
+  background-color: var(--accent-color);
 }
 
 
 
-/* Theme toggle */
 .theme-toggle button {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: white;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
 }
 
-/* Main Content */
+
+
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing);
 }
 
 main h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
+  text-align: center;
+  margin-bottom: var(--spacing);
+  color: var(--primary-color);
 }
 
 
-/* Footer styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: var(--spacing);
+  border: 1px solid #888;
+  width: 80%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  #join-form, #membership-cards {
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+}
+
+
 .footer-wrapper {
     display: flex;
+    flex-direction: row; /* Add this line */
     justify-content: space-between;
     align-items: flex-start;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-}
+  }
   
-/* Left section */
-.footer-left {
+  .footer-left {
     flex: 1;
     text-align: left;
-}
+  }
   
-.footer-left h3 {
-    margin-bottom: 0.5rem;
-}
-  
-.footer-left p {
-    margin: 0.25rem 0;
-}
-  
-/* Center section */
-.footer-center {
+  .footer-center {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
   
-.social-icons {
-    display: flex;
-    gap: 1.5rem;
-}
-  
-.social-icons img {
-    width: 40px;
-    height: 40px;
-}
-  
-/* Right section */
-.footer-right {
+  .footer-right {
     flex: 1;
     text-align: right;
-}
+  }
   
-.footer-right p {
-    margin: 0.25rem 0;
-}
-  
-/* Responsive layout */
-@media screen and (max-width: 768px) {
-    .footer-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .footer-left, .footer-center, .footer-right {
-        margin-bottom: 1.5rem;
-        text-align: center;
-    }
 
-    /* styles/join.css */
 
 .main-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Align items at the top */
-    flex-wrap: wrap; /* Ensures responsiveness */
-    gap: 20px; /* Space between form and cards */
-    max-width: 1200px;
-    margin: 0 auto; /* Center it */
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--spacing);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing);
 }
 
 #join-form, #membership-cards {
-    width: 48%; /* Each takes about half the width */
+  width: 45%;
 }
 
 #membership-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
 }
 
 #join-form form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px; /* Space between fields */
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing);
+  justify-content: space-between;
 }
 
 #join-form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px; /* Space between label and input */
+  display: block;
+  font-weight: bold;
+  margin-bottom: var(--spacing);
 }
 
-#join-form input,
-#join-form select,
-#join-form textarea {
-    width: 100%; /* Ensures inputs take full width */
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#join-form input, #join-form select, #join-form textarea {
+  width: 100%;
+  padding: var(--spacing);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
 }
 
 #join-form div {
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* Ensure each field takes full width */
-    margin-bottom: 15px; /* Add spacing between fields */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: var
 }
 
-/* Make full-width fields like textarea and submit button */
-#join-form textarea,
-#join-form button {
+#join-form textarea, #join-form button {
     width: 100%;
-}
-
-/* Modal Styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
-
-.modal.hidden {
-    display: none;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-@media screen and (max-width: 768px) {
-    .main-container {
-        flex-direction: column; /* Stack form and cards on smaller screens */
-    }
-
+  }
+  
+  /* Add mobile-first approach for join form */
+  @media screen and (max-width: 768px) {
     #join-form, #membership-cards {
-        width: 100%; /* Make them full width on smaller screens */
+      width: 100%;
     }
-    #join-form div{
-        width: 100%;
-    }
-}
-    
-    
-}
+   
+  }
+  
