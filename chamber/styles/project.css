@@ -1,0 +1,46 @@
+
+:root {
+    --primary-color: #df275e;
+    --secondary-color: #deeaee;
+    --accent-color: hsl(152, 75%, 51%);
+    --text-dark: #333;
+    --text-light: #fff;
+    --header-font: 'Montserrat', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 5px;
+}
+
+/* Typography */
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-family: var(--body-font);
+    color: var(--text-dark);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      color: var(--primary-color);
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    .wireframes img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      margin-top: 1rem;
+    }
+
+    code {
+      background-color: #ffe0cc;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+  
