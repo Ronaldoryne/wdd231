@@ -1,0 +1,52 @@
+[
+    {
+      "title": "Historic Museum",
+      "image": "chamber/images/museum.webp",
+      "address": "12 Main St, Home",
+      "description": "Explore the local history through interactive exhibits."
+    },
+    {
+      "title": "Sunset Park",
+      "image": "chamber/images/sunpark.webp",
+      "address": "45 brick St, johanessburg",
+      "description": "A beautiful place for picnics and sunsets."
+    },
+    {
+        "title": "Library",
+        "image": "chamber/images/library.webp",
+        "address": "456 St, city",
+        "description": "A beautiful place for reading."
+    },
+    {
+        "title": "Shop",
+        "image": "chamber/images/shop.webp",
+        "address": "glenmaris St, shoprite",
+        "description": "A beautiful place for buying."
+    },
+    {
+        "title": "Taxi rank",
+        "image": "chamber/images/taxirank.webp",
+        "address": "4 first St, schol",
+        "description": "A place which helps you get to your destination."
+    },
+    {
+        "title": "School",
+        "image": "chamber/images/school.webp",
+        "address": "456 nest St, jozi",
+        "description": "A beautiful place for learning."
+    },
+    {
+        "title": "Pool",
+        "image": "chamber/images/pool.webp",
+        "address": "1441 kgalala St, ivory park",
+        "description": "A beautiful place for relaxation."
+    },
+    {
+        "title": "Park",
+        "image": "chamber/images/park.webp",
+        "address": "4 mzilikazi St, johannesburg",
+        "description": "A beautiful place for picnics ."
+    }
+    
+  ]
+  

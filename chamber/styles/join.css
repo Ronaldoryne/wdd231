@@ -1,5 +1,3 @@
-
-
 :root {
   --primary-color: #df275e;
   --secondary-color: #deeaee;
@@ -13,14 +11,15 @@
   --spacing: 1.5rem;
 }
 
-
-
 body {
   font-family: var(--body-font);
   font-weight: 400;
   color: var(--text-dark);
   line-height: 1.6;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
 }
 
 h1, h2, h3, h4 {
@@ -30,9 +29,10 @@ h1, h2, h3, h4 {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
-
+/* Header */
 header {
   background-color: var(--primary-color);
   color: white;
@@ -67,7 +67,7 @@ header {
   font-size: 0.9rem;
 }
 
-
+/* Navigation */
 nav {
   display: flex;
   align-items: center;
@@ -76,6 +76,8 @@ nav {
 nav ul {
   display: flex;
   list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 nav a {
@@ -88,14 +90,15 @@ nav a {
 
 nav a:hover {
   background-color: var(--secondary-color);
+  color: var(--text-dark);
 }
 
 nav a.active {
   background-color: var(--accent-color);
+  color: var(--text-light);
 }
 
-
-
+/* Theme Toggle */
 .theme-toggle button {
   background: none;
   border: none;
@@ -104,8 +107,7 @@ nav a.active {
   color: white;
 }
 
-
-
+/* Main Content */
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -118,75 +120,110 @@ main h2 {
   color: var(--primary-color);
 }
 
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 60px;
+/* Visit Message */
+.visit-message {
+  text-align: center;
+  font-size: 1rem;
+  padding: 1rem;
+  background-color: #e3f2fd;
+  color: #333;
+  border-radius: var(--border-radius);
+  margin: 1rem auto;
+  max-width: 600px;
 }
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto;
+/* Business Directory Grid */
+.directory-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing);
   padding: var(--spacing);
-  border: 1px solid #888;
-  width: 80%;
 }
 
+/* Business Cards */
+.business-card {
+  display: grid;
+  grid-template-areas:
+    "image"
+    "title"
+    "desc"
+    "address"
+    "button";
+  grid-template-rows: auto auto 1fr auto auto;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
 
+.business-card img {
+  grid-area: image;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
 
-@media screen and (max-width: 768px) {
-  .main-container {
-    flex-direction: column;
+.business-card h2 {
+  grid-area: title;
+  margin: 1rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.business-card p.description {
+  grid-area: desc;
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.business-card p.address {
+  grid-area: address;
+  margin: 0 1rem 1rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.business-card a.visit-button {
+  grid-area: button;
+  margin: 0 1rem 1rem;
+  padding: 0.5rem;
+  background-color: var(--accent-color);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+  display: block;
+}
+
+/* Hover Effects (non-mobile only) */
+@media (hover: hover) {
+  .business-card img:hover {
+    transform: scale(1.05);
   }
 
-  #join-form, #membership-cards {
-    width: 100%;
-  }
-
-  .modal-content {
-    width: 90%;
+  .business-card a.visit-button:hover {
+    background-color: hsl(152, 75%, 45%);
   }
 }
 
+/* Responsive Grid Adjustments */
+@media (max-width: 900px) {
+  .directory-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-.footer-wrapper {
-    display: flex;
-    flex-direction: row; /* Add this line */
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
+@media (max-width: 600px) {
+  .directory-container {
+    grid-template-columns: 1fr;
   }
-  
-  .footer-left {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .footer-center {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .footer-right {
-    flex: 1;
-    text-align: right;
-  }
-  
+}
 
-
+/* Main container layout */
 .main-container {
   display: flex;
   justify-content: space-between;
@@ -198,52 +235,120 @@ main h2 {
   padding: var(--spacing);
 }
 
-#join-form, #membership-cards {
-  width: 45%;
+/* Tablet Layout Fixes */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .main-container {
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
 
-#membership-cards {
+/* Footer */
+.footer-wrapper {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing);
-}
-
-#join-form form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing);
+  flex-direction: row;
   justify-content: space-between;
-}
-
-#join-form label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: var(--spacing);
-}
-
-#join-form input, #join-form select, #join-form textarea {
+  align-items: flex-start;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
   width: 100%;
-  padding: var(--spacing);
-  border: 1px solid #ccc;
-  border-radius: var(--border-radius);
 }
 
-#join-form div {
+.footer-left {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+/* Card Grid Layout */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+  gap: var(--spacing);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing);
+}
+
+/* Individual Card Styling */
+.card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-bottom: var;
 }
 
-#join-form textarea, #join-form button {
-    width: 100%;
+.card figure {
+  margin: 0;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card h2 {
+  margin: 1rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.card address {
+  margin: 0 1rem;
+  font-size: 0.85rem;
+  color: #777;
+  font-style: normal;
+}
+
+.card p {
+  margin: 0.5rem 1rem;
+  font-size: 0.95rem;
+  color: #555;
+  flex-grow: 1;
+}
+
+.card button {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card button:hover {
+  background-color: hsl(152, 75%, 45%);
+}
+
+/* Responsive adjustments for card grid */
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
   }
-  
-  /* Add mobile-first approach for join form */
-  @media screen and (max-width: 768px) {
-    #join-form, #membership-cards {
-      width: 100%;
-    }
-   
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* 1 column on small screens */
   }
-  
+}
