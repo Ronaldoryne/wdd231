@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuickBite - Fast and delicious food delivery service with a wide variety of cuisines.">
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="QuickBite - Fast & Delicious Food Delivery">
+    <meta property="og:description" content="Get your favorite meals delivered in minutes. Choose from a wide variety of cuisines and local restaurants.">
+    <meta property="og:image" content="https://ronaldoryne.github.io/wdd231/project/quickbite/images/logo.svg">
+    <meta property="og:url" content="https://ronaldoryne.github.io/wdd231/project/quickbite/">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <title>QuickBite - Fast & Delicious Food Delivery</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/shop.webp" alt="QuickBite Logo">
+                    <span>QuickBite</span>
+                </a>
+            </div>
+            <nav>
+                <button id="hamburger-menu" aria-label="Menu">☰</button>
+                <ul id="primary-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Order Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Delicious Food, Delivered Fast</h1>
+                <p>Experience the best local restaurants delivered to your doorstep in minutes.</p>
+                <a href="menu.html" class="cta-button">Browse Menu</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Why Choose QuickBite?</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <img src="images/fast.png" alt="Fast delivery icon" loading="lazy">
+                    <h3>Fast Delivery</h3>
+                    <p>Get your food delivered in 30 minutes or less.</p>
+                </div>
+                <div class="card">
+                    <img src="images/quality.png" alt="Quality food icon" loading="lazy">
+                    <h3>Quality Food</h3>
+                    <p>Partner with only the best local restaurants.</p>
+                </div>
+                <div class="card">
+                    <img src="images/affordable.png" alt="Affordable prices icon" loading="lazy">
+                    <h3>Affordable Prices</h3>
+                    <p>Enjoy great food without breaking the bank.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-items">
+            <h2>Featured Items</h2>
+            <div id="featured-container" class="item-cards">
+                <!-- Dynamic content will be loaded here via JavaScript -->
+                <p class="loading">Loading featured items...</p>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-slider">
+                <!-- Testimonials will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <section class="app-download">
+            <div class="app-content">
+                <h2>Get the QuickBite App</h2>
+                <p>Order faster, track your delivery, and earn rewards!</p>
+                <div class="app-buttons">
+                    <a href="#" class="app-button">
+                        <img src="images/app.png" alt="App Store" loading="lazy">
+                    </a>
+                    <a href="#" class="app-button">
+                        <img src="images/google.png" alt="Google Play" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/shop.webp" alt="QuickBite Logo">
+                <span>QuickBite</span>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Order Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="attributions.html">Attributions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                        <a href="#" aria-label="youtube"><img src="images/youtube.png" alt="Youtube"></a>
+                        <a href="#" aria-label="Twitter"><img src="images/twitter.png" alt="Twitter"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 QuickBite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal template -->
+    <div id="modal-container" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modal-body">
+                <!-- Modal content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

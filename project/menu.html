@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse QuickBite's diverse menu of delicious meals from top local restaurants. Filter by cuisine, price, and dietary preferences.">
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="QuickBite Menu - Browse Our Delicious Selection">
+    <meta property="og:description" content="Explore our diverse menu of meals from top local restaurants. Find your perfect meal now!">
+    <meta property="og:image" content="https://yourusername.github.io/wdd231/quickbite/images/logo.svg">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/quickbite/menu.html">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <title>QuickBite Menu - Browse Our Delicious Selection</title>
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/shop.webp" alt="QuickBite Logo">
+                    <span>QuickBite</span>
+                </a>
+            </div>
+            <nav>
+                <button id="hamburger-menu" aria-label="Menu">☰</button>
+                <ul id="primary-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Order Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="menu-header">
+            <h1>Our Menu</h1>
+            <p>Browse our selection of delicious meals from top local restaurants</p>
+        </section>
+
+        <section class="filter-section">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="cuisine-filter">Cuisine</label>
+                    <select id="cuisine-filter">
+                        <option value="">All Cuisines</option>
+                        <!-- Options will be populated dynamically -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-filter">Price Range</label>
+                    <select id="price-filter">
+                        <option value="">All Prices</option>
+                        <option value="1">$ (Under $10)</option>
+                        <option value="2">$$ ($10-$20)</option>
+                        <option value="3">$$$ ($20+)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="dietary-filter">Dietary</label>
+                    <select id="dietary-filter">
+                        <option value="">All Options</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="gluten-free">Gluten-Free</option>
+                    </select>
+                </div>
+                <button id="search-button" class="search-button">Search</button>
+                <button id="clear-filters" class="clear-button">Clear Filters</button>
+            </div>
+        </section>
+
+        <section class="menu-items">
+            <div id="menu-container" class="item-grid">
+                <!-- Menu items will be dynamically loaded here -->
+                <p class="loading">Loading menu items...</p>
+            </div>
+        </section>
+
+        <div class="pagination">
+            <button id="prev-page" disabled>Previous</button>
+            <span id="page-indicator">Page 1</span>
+            <button id="next-page">Next</button>
+        </div>
+        <div id="modal" class="modal"></div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/shop.webp" alt="QuickBite Logo">
+                <span>QuickBite</span>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Order Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="attributions.html">Attributions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">  
+                        <a href="#" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                        <a href="#" aria-label="youtube"><img src="images/youtube.png" alt="Youtube"></a>
+                        <a href="#" aria-label="Twitter"><img src="images/twitter.png" alt="Twitter"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 QuickBite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal template -->
+    <div id="modal-container" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modal-body">
+                <!-- Modal content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
